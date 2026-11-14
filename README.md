@@ -92,5 +92,12 @@ tests/                       ユニットテスト
 .github/workflows/tests.yml  CI
 ```
 
+## 根拠（学習）
+
+| 機能 | 裏付けになる学習（発行元・名称・発行日） | 照会先（Credly） |
+|---|---|---|
+| ID列の欠損・重複の検出 | Coursera（認定：IBM）「Data Analysis with Python」2026年11月9日 | https://www.credly.com/badges/a1425bcf-2c74-43eb-a7f9-2edd448788db |
+| 日付の表記の確認と統一 | Coursera（認定：IBM）「Python for Data Science and AI」2026年11月9日 | https://www.credly.com/badges/517da8b6-38f8-49c5-8126-d33b8cf1f33a |
+
 ## ライセンス
 MIT（[LICENSE](LICENSE)）
