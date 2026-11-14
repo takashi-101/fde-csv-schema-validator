@@ -1,7 +1,5 @@
 # FDE CSV Schema Validator（CSVの行のID欠損・ID重複・日付形式の検査）
 
-[![tests](https://github.com/takashi-101/fde-csv-schema-validator/actions/workflows/tests.yml/badge.svg)](https://github.com/takashi-101/fde-csv-schema-validator/actions/workflows/tests.yml)
-
 CSVから読み込んだ行（列名をキーにした辞書のリスト）について、ID列の欠損と重複、日付列の形式を検査し、件数と行番号付きのエラーの一覧を返すPythonの関数です。標準ライブラリだけで動きます。
 
 ## 30秒で読む要点
@@ -72,8 +70,6 @@ CSVファイルの読み込みはしません。`csv.DictReader` などで読ん
 - 異常系：和暦・1桁の月日・その他の形式の拒否、IDの欠損（空文字・空白・`None`・列なし）、日付の欠損、列名の指定違い
 - READMEの「実行」に載せた出力が、`examples/run_example.py` の実際の出力と一致すること
 
-CI（GitHub Actionsによる自動テスト）は、push と pull request のたびに、Python 3.11 と 3.12 でテストとサンプルの実行を行う設定です（`.github/workflows/tests.yml`）。
-
 ## 制約
 - 和暦、区切り文字のある1桁の月日、時刻付き、区切りなしの日付は読めません。
 - 月日の範囲は検査しません。`2026-02-30` も問題なしになります。
@@ -89,15 +85,16 @@ examples/
   sample_applications.csv    見本データ（架空）
   run_example.py             見本データを検査して結果を表示
 tests/                       ユニットテスト
-.github/workflows/tests.yml  CI
 ```
 
 ## 根拠（学習）
 
-| 機能 | 裏付けになる学習（発行元・名称・発行日） | 照会先（Credly） |
-|---|---|---|
-| ID列の欠損・重複の検出 | Coursera（認定：IBM）「Data Analysis with Python」2026年11月9日 | https://www.credly.com/badges/a1425bcf-2c74-43eb-a7f9-2edd448788db |
-| 日付の表記の確認と統一 | Coursera（認定：IBM）「Python for Data Science and AI」2026年11月9日 | https://www.credly.com/badges/517da8b6-38f8-49c5-8126-d33b8cf1f33a |
+| 求められる力 | 機能 | 裏付けになる学習（発行元・名称・発行日） | 照会先（Credly） |
+|---|---|---|---|
+| データ活用（Python・SQL・BI） | ID列の欠損・重複の検出 | Coursera（認定：IBM）「Data Analysis with Python」2026年11月9日 | https://www.credly.com/badges/a1425bcf-2c74-43eb-a7f9-2edd448788db |
+| データ活用（Python・SQL・BI） | 日付の表記の確認と統一 | Coursera（認定：IBM）「Python for Data Science and AI」2026年11月9日 | https://www.credly.com/badges/517da8b6-38f8-49c5-8126-d33b8cf1f33a |
+
+「求められる力」の分け方は、[プロフィール](https://github.com/takashi-101) の「FDE・AXで求められる力と、その根拠」と同じです。
 
 ## ライセンス
 MIT（[LICENSE](LICENSE)）
